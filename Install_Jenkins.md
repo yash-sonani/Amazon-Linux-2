@@ -19,3 +19,11 @@ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 ```
 yum -y install jenkins
 ```
+# 5.] Start Jenkins Service
+```
+service jenkins start
+```
+
+# 6.] Access Jenkins 
+By default jenkins runs at port `8080`, You can access jenkins at
+`http://YOUR-SERVER-PUBLIC-IP:8080`
