@@ -164,5 +164,6 @@ docker system prune [ Cleans up dangling images, containers, volumes, and networ
 docker system prune -a [ Additionally remove any stopped containers and all unused images ]
 docker system prune -a --volumes [ prune volumes also ]
 docker rm $(docker ps -a -q) [ Remove all stopped containers ]
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}") [ Remove all untagged Images ]
 ```
       
